@@ -12,6 +12,9 @@ public class Main {
                 Comparator.comparing(Cat::getName)
                         .thenComparing(Cat::getAge)
         ) ;
+
+        cats.removeIf( cat -> cat.getColor() == Cat.Color.GINGER );
+
         Printer.print(cats);
 
         // А сюда добавьте код, который будет сортировать коллекцию котов
