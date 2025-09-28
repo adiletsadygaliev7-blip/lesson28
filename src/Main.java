@@ -6,10 +6,13 @@ public class Main {
         var cats = Cat.makeCats(10);
         Printer.print(cats);
     cats.sort(Comparator.comparing(Cat::getBreed));
-    Printer.print(cats);
 
-        cats.sort( (c1, c2)  -> c1.getAge() - c2.getAge() ) ;
 
+        cats.sort(
+                Comparator.comparing(Cat::getName)
+                        .thenComparing(Cat::getAge)
+        ) ;
+        Printer.print(cats);
 
         // А сюда добавьте код, который будет сортировать коллекцию котов
         // используйте лямбда-выражения и ссылки на методы
