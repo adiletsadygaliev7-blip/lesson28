@@ -15,6 +15,8 @@ public class Main {
 
         cats.removeIf( cat -> cat.getColor() == Cat.Color.GINGER );
 
+        cats.removeIf( cat -> cat.getName().length() == 5);
+
         Printer.print(cats);
 
         // А сюда добавьте код, который будет сортировать коллекцию котов
