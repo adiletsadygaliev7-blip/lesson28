@@ -1,4 +1,3 @@
-package kg.attractor.java.task1;
 
 public class Main {
 
@@ -6,6 +5,9 @@ public class Main {
 
         var cats = Cat.makeCats(10);
         Printer.print(cats);
+
+        cats.sort( (c1, c2)  -> c1.getAge() - c2.getAge() ) ;
+
 
         // А сюда добавьте код, который будет сортировать коллекцию котов
         // используйте лямбда-выражения и ссылки на методы
