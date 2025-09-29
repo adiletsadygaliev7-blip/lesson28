@@ -9,13 +9,20 @@ public class Main {
         // Я Misty. Я прыгаю!
         // Я Tibbles. Я сплю!
         // Я Ginger. Я кушаю!
-        // для решения примените лямбда-выражения, 
+        // для решения примените лямбда-выражения,
+
+
+
         
         // каждый кот должен уметь выполнять что-то своё
         var cats = new ArrayList<ActiveCat>();
-        cats.add(new ActiveCat(???));
-        cats.add(new ActiveCat(???));
-        cats.add(new ActiveCat(???));
+        cats.add(new ActiveCat(ActiveCat::jump));
+        cats.add(new ActiveCat(ActiveCat::sleep));
+        cats.add(new ActiveCat(ActiveCat::eat));
+        cats.add(new ActiveCat(ActiveCat::sing));
+        cats.add(new ActiveCat(ActiveCat::hunting));
+        cats.add(new ActiveCat(ActiveCat::play));
+        cats.add(new ActiveCat(ActiveCat::crazy));
         // добавьте ещё два-три кота, с совершенно другими действиями
 
         cats.forEach(ActiveCat::doAction);
